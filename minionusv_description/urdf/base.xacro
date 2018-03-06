@@ -81,11 +81,14 @@
 
     <!-- !!!!!!TO DO LATER!!!!! -->
 
-    <!-- Include the thruster modules -->
-    <!-- <xacro:include filename="$(find minionusv_description)/urdf/thrusters.xacro"/> -->
-
     <!-- Include the sensor modules -->
-    <!-- <xacro:include filename="$(find minionusv_description)/urdf/sensors.xacro"/> -->
+    <!-- <xacro:include filename="$(find bluerov2_description)/urdf/sensors.xacro"/> -->
+
+    <!-- ADDED -->
+    <!-- <xacro:include filename="$(find minionusv_description)/urdf/actuators.xacro" /> -->
+
+    <!-- Include the thruster modules NOT IN RexROV 2, they put in rexrov2_actuators -->
+    <!-- <xacro:include filename="$(find bluerov2_description)/urdf/thrusters.xacro"/> -->
 
   </xacro:macro>
 
