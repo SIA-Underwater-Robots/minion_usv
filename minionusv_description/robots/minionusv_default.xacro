@@ -6,8 +6,8 @@
   <xacro:include filename="$(find minionusv_description)/urdf/base.xacro"/>
   <xacro:include filename="$(find minionusv_description)/urdf/gazebo.xacro"/>
 
-<!-- Create the bluerov2 -->
-  <xacro:bluerov2_base namespace="$(arg namespace)">
+<!-- Create the minionusv -->
+  <xacro:minionusv_base namespace="$(arg namespace)">
     <!-- The underwater object plugin is given as an input block parameter to
      allow the addition of external models of manipulator units -->
     <gazebo>
@@ -16,7 +16,7 @@
         <flow_velocity_topic>hydrodynamics/current_velocity</flow_velocity_topic>
         <debug>$(arg debug)</debug>
         <!-- Adding the hydrodynamic and hydrostatic parameters for the vehicle -->
-        <xacro:bluerov2_hydro_model namespace="$(arg namespace)"/>
+        <xacro:minionusv_hydro_model namespace="$(arg namespace)"/>
         <!--
           In case other modules are added to the vehicle (such as a manipulator)
           that also have link running with the underwater object plugin, they
@@ -26,7 +26,7 @@
         -->
       </plugin>
     </gazebo>
-  </xacro:bluerov2_base>
+  </xacro:minionusv_base>
 
   <!-- Joint state publisher plugin -->
   <xacro:default_joint_state_publisher namespace="$(arg namespace)" update_rate="50"/>

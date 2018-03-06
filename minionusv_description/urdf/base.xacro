@@ -34,7 +34,7 @@
   <xacro:property name="collision_mesh_file" value="file://$(find minionusv_description)/meshes/vehicle.stl"/>
 
   <!-- Vehicle macro -->
-  <!-- <xacro:macro name="bluerov2_base" params="namespace debug *gazebo"> -->
+  <!-- <xacro:macro name="minionusv_base" params="namespace debug *gazebo"> -->
   <xacro:macro name="minionusv_base" params="namespace *gazebo">
 
       <!-- Rigid body description of the base link -->
@@ -82,10 +82,10 @@
     <!-- !!!!!!TO DO LATER!!!!! -->
 
     <!-- Include the thruster modules -->
-    <!-- <xacro:include filename="$(find bluerov2_description)/urdf/thrusters.xacro"/> -->
+    <!-- <xacro:include filename="$(find minionusv_description)/urdf/thrusters.xacro"/> -->
 
     <!-- Include the sensor modules -->
-    <!-- <xacro:include filename="$(find bluerov2_description)/urdf/sensors.xacro"/> -->
+    <!-- <xacro:include filename="$(find minionusv_description)/urdf/sensors.xacro"/> -->
 
   </xacro:macro>
 

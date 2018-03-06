@@ -6,32 +6,32 @@
   The original values, [0.0822, -0.00773, 0.3872] however, seem to
   assume NWU (otherwise cob is below cog?).
   -->
-  <xacro:property name="bluerov2_cob" value="0.0 0.0 0.3"/>
+  <xacro:property name="minionusv_cob" value="0.0 0.0 0.3"/>
   <!-- Volume, see p.31 in Berg2012 -->
-  <xacro:property name="bluerov2_volume" value="1.83826"/>
+  <xacro:property name="minionusv_volume" value="1.83826"/>
 
   <!-- Describing the dimensions of the vehicle's bounding box -->
-  <xacro:property name="bluerov2_length" value="1"/>
-  <xacro:property name="bluerov2_width"  value="1"/>
-  <xacro:property name="bluerov2_height" value="1"/>
+  <xacro:property name="minionusv_length" value="1"/>
+  <xacro:property name="minionusv_width"  value="1"/>
+  <xacro:property name="minionusv_height" value="1"/>
 
-  <xacro:macro name="bluerov2_hydro_model" params="namespace">
+  <xacro:macro name="minionusv_hydro_model" params="namespace">
     <!-- List of hydrodynamic models this robot's links -->
     <link name="${namespace}/base_link">
       <!-- This flag will make the link neutrally buoyant -->
       <neutrally_buoyant>0</neutrally_buoyant>
       <!-- Link's volume -->
-      <volume>${bluerov2_volume}</volume>
+      <volume>${minionusv_volume}</volume>
       <!-- Link's bounding box, it is used to recalculate the immersed
         volume when close to the surface.
         This is a workaround the invalid bounding box given by Gazebo-->
       <box>
-        <width>${bluerov2_width}</width>
-        <length>${bluerov2_length}</length>
-        <height>${bluerov2_height}</height>
+        <width>${minionusv_width}</width>
+        <length>${minionusv_length}</length>
+        <height>${minionusv_height}</height>
       </box>
       <!-- Center of buoyancy -->
-      <center_of_buoyancy>${bluerov2_cob}</center_of_buoyancy>
+      <center_of_buoyancy>${minionusv_cob}</center_of_buoyancy>
 
       <!-- Fossen's equation of motion for underwater vehicles
       Reference:
