@@ -9,11 +9,13 @@
   <xacro:property name="minionusv_cob" value="0.0 0.0 0.3"/>
   <!-- Volume, see p.31 in Berg2012 -->
   <xacro:property name="minionusv_volume" value="1.83826"/>
+  <!--  0.18975 -->
 
   <!-- Describing the dimensions of the vehicle's bounding box -->
-  <xacro:property name="minionusv_length" value="1"/>
-  <xacro:property name="minionusv_width"  value="1"/>
-  <xacro:property name="minionusv_height" value="1"/>
+  <xacro:property name="minionusv_length" value="0.401"/>
+  <xacro:property name="minionusv_width"  value="0.401"/>
+  <xacro:property name="minionusv_height" value="0.025"/>
+  <!-- minionusv_height is not really! It's just for run... We need first calculate the Fossen parameters -->
 
   <xacro:macro name="minionusv_hydro_model" params="namespace">
     <!-- List of hydrodynamic models this robot's links -->
@@ -90,9 +92,9 @@
                   control. John Wiley & Sons, 2011.
           -->
 
-          <metacentric_width>0.2</metacentric_width>
-          <metacentric_length>0.2</metacentric_length>
-          <water_level_plane_area>0.04</water_level_plane_area>
+          <metacentric_width>0.401</metacentric_width>
+          <metacentric_length>0.401</metacentric_length>
+          <water_level_plane_area>0.12</water_level_plane_area>
 
       </hydrodynamic_model>
     </link>
