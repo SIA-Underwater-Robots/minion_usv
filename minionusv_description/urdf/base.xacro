@@ -82,7 +82,7 @@
     <!-- !!!!!!TO DO LATER!!!!! -->
 
     <!-- Include the sensor modules -->
-    <!-- <xacro:include filename="$(find bluerov2_description)/urdf/sensors.xacro"/> -->
+    <xacro:include filename="$(find minionusv_description)/urdf/sensors.xacro"/>
 
     <!-- ADDED -->
     <xacro:include filename="$(find minionusv_description)/urdf/actuators.xacro" />
