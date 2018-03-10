@@ -35,21 +35,6 @@ are usually the ones that are going to be used.
 <!-- File containing the thruster allocation matrix -->
 <arg name="tam_file" default="$(find minionusv_control)/config/TAM.yaml"/>
 
-
-<!--  PID Controller Node from RexROV2 -->
-<include file="$(find uuv_trajectory_control)/launch/rov_pid_controller.launch">
-  <arg name="uuv_name" value="$(arg uuv_name)"/>
-  <arg name="gui_on" value="$(arg gui_on)"/>
-  <arg name="saturation" value="2000"/>
-  <arg name="Kp" value="$(arg Kp)"/>
-  <arg name="Kd" value="$(arg Kd)"/>
-  <arg name="Ki" value="$(arg Ki)"/>
-  <arg name="use_ned_frame" value="$(arg use_ned_frame)"/>
-  <arg name="thruster_manager_output_dir" value="$(arg thruster_manager_output_dir)"/>
-  <arg name="thruster_manager_config_file" value="$(arg thruster_manager_config_file)"/>
-  <arg name="tam_file" value="$(arg tam_file)"/>
-</include>
-
 <!--
 It is important to start all nodes relative to this vehicle under the vehicle's
 namespace in order to avoid errors and parameter being initialized in wrong place.

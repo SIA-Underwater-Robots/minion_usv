@@ -2,7 +2,7 @@
 <package>
   <name>minionusv_gazebo</name>
   <version>0.0.0</version>
-  <description>Package with launch files for demonstrations with the minionusv vehicle</description>
+  <description>Package with launch files for demonstrations with the Minion USV vehicle</description>
 
   <maintainer email="frederico@my.ingeniarius.pt">Ingeniarius</maintainer>
   <author email="frederico.vaz@isr.uc.pt">ISR-UC</author>
