@@ -1,24 +1,24 @@
-# MinionUSV
+# Minion USV
 
 This repository contains the robot description and necessary launch files to
-simulate the MinionUSV unmanned surface vehicle. This repository is complementary
+simulate the Minion USV (unmanned surface vehicle). This repository is complementary
 to the [Unmanned Underwater Vehicle Simulator (UUV Simulator)](https://github.com/uuvsimulator/uuv_simulator),
 an open-source project extending the simulation capabilities of the robotics
 simulator Gazebo to underwater vehicles and environments. For installation and
 usage instructions, please refer to the [documentation pages](https://uuvsimulator.github.io/).
 
-The dimensions and parameters for the MinionUSV are derived from...
+The dimensions and parameters for the Minion USV are derived from...
 
 
 ## Requirements
 
-To simulate the BlueROV 2 vehicle, please refer to the [UUV Simulator](https://github.com/uuvsimulator/uuv_simulator)
+To simulate the Minion USV, please refer to the [UUV Simulator](https://github.com/uuvsimulator/uuv_simulator)
 repository and follow the installation instructions of the package. Then you can clone
 this package in the `src` folder of you catkin workspace
 
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/fredvaz/minionusv.git
+git clone https://github.com/fredvaz/minion_usv.git
 ```
 
 and then build your catkin workspace
@@ -40,10 +40,10 @@ roslaunch uuv_descriptions ocean_waves.launch
 and then
 
 ```bash
-roslaunch bluerov2_gazebo upload_minionusv.launch 
+roslaunch bluerov2_gazebo upload_minion_usv.launch 
 ```
 
 ## License
 
-RexROV 2 package is open-sourced under the Apache-2.0 license. See the
+Minion USV package is open-sourced under the Apache-2.0 license. See the
 [LICENSE](LICENSE) file for details.
