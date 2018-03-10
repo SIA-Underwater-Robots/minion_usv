@@ -1,20 +1,27 @@
 # Minion USV
 
 This repository contains the robot description and necessary launch files to
-simulate the Minion USV (unmanned surface vehicle). This repository is complementary
-to the [Unmanned Underwater Vehicle Simulator (UUV Simulator)](https://github.com/uuvsimulator/uuv_simulator),
-an open-source project extending the simulation capabilities of the robotics
-simulator Gazebo to underwater vehicles and environments. For installation and
-usage instructions, please refer to the [documentation pages](https://uuvsimulator.github.io/).
+simulate the Minion USV (unmanned surface vehicle) on [Unmanned Underwater Vehicle Simulator (UUV Simulator)](https://github.com/uuvsimulator/uuv_simulator).
 
-The dimensions and parameters for the Minion USV are derived from...
+This work are in developement at [Ingeniarius, Lda.](http://ingeniarius.pt/) and [Instituite of Systems and Robotics University of Coimbra](https://www.isr.uc.pt/) within the scope of MS thesis "Localization of an unmanned underwater vehicle using multiple water surface robots, multilateration, and sensor data fusion".
+
+<p align="center">
+  <img src="doc/imgs/minion_usv.png">
+</p>
 
 
 ## Requirements
 
-To simulate the Minion USV, please refer to the [UUV Simulator](https://github.com/uuvsimulator/uuv_simulator)
-repository and follow the installation instructions of the package. Then you can clone
+- git
+- [ros-\*-desktop-full](http://wiki.ros.org/ROS/Installation)
+  - kinetic or newer
+- [UUV Simulator](https://uuvsimulator.github.io/)
 this package in the `src` folder of you catkin workspace
+
+
+## Installation 
+
+Clone this package in the `src` folder of you catkin workspace
 
 ```
 cd ~/catkin_ws/src
@@ -28,7 +35,7 @@ cd ~/catkin_ws
 catkin_make # or <catkin build>, if you are using catkin_tools
 ```
 
-## Example of usage
+## Running with UUV Simulator
 
 To run a demonstration with the vehicle with teleoperation, you can run a UUV
 simulator Gazebo scenario, such as
