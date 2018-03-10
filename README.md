@@ -16,7 +16,7 @@ This work are in developement at [Ingeniarius, Lda.](http://ingeniarius.pt/) and
 - [ros-\*-desktop-full](http://wiki.ros.org/ROS/Installation)
   - kinetic or newer
 - [UUV Simulator](https://uuvsimulator.github.io/)
-this package in the `src` folder of you catkin workspace
+
 
 
 ## Installation 
