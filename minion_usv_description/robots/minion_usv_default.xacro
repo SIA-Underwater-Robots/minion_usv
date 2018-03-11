@@ -2,8 +2,9 @@
 <robot name="minion_usv" xmlns:xacro="http://www.ros.org/wiki/xacro" >
   <xacro:arg name="debug" default="0"/>
   <xacro:arg name="namespace" default="minion_usv"/>
-  <!-- Include the ROV macro file -->
+  <!-- Include the ROV macro file xacro:macro minion_usv_base -->
   <xacro:include filename="$(find minion_usv_description)/urdf/base.xacro"/>
+  <!-- Hydrodynamic and hydrostatic parameters for the vehicle xacro:macro minion_usv_hydro_model -->
   <xacro:include filename="$(find minion_usv_description)/urdf/gazebo.xacro"/>
 
 <!-- Create the minion_usv -->
