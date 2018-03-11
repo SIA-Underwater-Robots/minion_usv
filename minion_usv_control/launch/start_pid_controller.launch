@@ -6,15 +6,15 @@
     can be assigned differently at startup
   -->
 
-    <arg name="uuv_name" default="minion_usv"/>
+    <arg name="usv_name" default="minion_usv"/>
     <!-- Name of the vehicle model: the name of the robot model -->
-    <arg name="model_name" default="$(arg uuv_name)"/>
+    <arg name="model_name" default="$(arg usv_name)"/>
     <!-- Flag to start recoding a rosbag  -->
     <arg name="record" default="false"/>
     <!-- Flag to RViz -->
     <arg name="gui_on" default="false"/>
     <!-- Flag to NED Referential -->
-   <arg name="use_ned_frame" default="false"/>
+    <arg name="use_ned_frame" default="false"/>
     <!--
     The controller parameters are given below and will be given to the controller node in its
     private namespace. These are vectors and for roslaunch to see this as one argument, there
@@ -40,7 +40,7 @@
 
      <!-- Start the PID controller with its default parameters for the RexROV vehicle  -->
     <include file="$(find uuv_trajectory_control)/launch/rov_pid_controller.launch">
-      <arg name="uuv_name" value="$(arg uuv_name)"/>
+      <arg name="uuv_name" value="$(arg usv_name)"/>
       <arg name="gui_on" value="$(arg gui_on)"/>
       <arg name="saturation" value="2000"/>
       <arg name="Kp" value="$(arg Kp)"/>
@@ -62,7 +62,7 @@
     <group if="$(arg teleop_on)">
       <!-- Start joystick teleop node  -->
       <include file="$(find uuv_teleop)/launch/uuv_teleop.launch">
-          <arg name="uuv_name" value="$(arg uuv_name)"/>
+          <arg name="usv_name" value="$(arg usv_name)"/>
           <arg name="joy_id" value="$(arg joy_id)"/>
           <arg name="output_topic" value="cmd_vel"/>
           <arg name="message_type" value="twist"/>
