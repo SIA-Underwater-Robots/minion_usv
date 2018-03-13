@@ -47,7 +47,7 @@ roslaunch uuv_descriptions ocean_waves.launch
 and then
 
 ```bash
-roslaunch bluerov2_gazebo upload_minion_usv.launch 
+roslaunch minion_usv_gazebo start_pid_controller_demo.launch 
 ```
 
 ## License
