@@ -16,6 +16,11 @@
 
   <!-- ###### TO BE IMPLEMENTED ###### -->
 
+  <!--  Mount a Hydrophone sensor.  -->
+  <xacro:default_acoustic_range namespace="${namespace}" parent_link="${namespace}/base_link">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:default_acoustic_range>
+
   <!-- Mount a Hydrophone sensor. -->
   <!-- <xacro:default_hydrophone namespace="${namespace}" parent_link="${namespace}/base_link">
     <origin xyz="0 0 0" rpy="0 0 0"/>
