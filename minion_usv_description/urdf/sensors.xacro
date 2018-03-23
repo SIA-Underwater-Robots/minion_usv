@@ -16,8 +16,8 @@
 
   <!-- ###### TO BE IMPLEMENTED ###### -->
 
-  <!--  Mount a Hydrophone sensor.  -->
-  <xacro:default_hydrophone namespace="${namespace}" parent_link="${namespace}/base_link" beacon_topic="bluerov2/beacon">
+  <!--  Mount a Hydrophone sensor.  If we put the Beacon on Seabed, parent is Seabed, so? -->
+  <xacro:default_hydrophone namespace="${namespace}" parent_link="${namespace}/base_link" beacon_parent="bluerov2">
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:default_hydrophone>
 
@@ -47,9 +47,9 @@
   <!-- ###### OTHERS ###### -->
 
   <!-- Forward-looking sonar sensor -->
-  <xacro:forward_multibeam_p900 namespace="${namespace}" parent_link="${namespace}/base_link">
+  <!-- <xacro:forward_multibeam_p900 namespace="${namespace}" parent_link="${namespace}/base_link">
     <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:forward_multibeam_p900>
+  </xacro:forward_multibeam_p900> -->
 
   <!-- DVL  -->
   <!-- <xacro:default_dvl namespace="${namespace}" parent_link="${namespace}/base_link">
@@ -57,9 +57,9 @@
   </xacro:default_dvl> -->
 
   <!-- RPT  -->
-  <xacro:default_rpt namespace="${namespace}" parent_link="${namespace}/base_link">
+  <!-- <xacro:default_rpt namespace="${namespace}" parent_link="${namespace}/base_link">
     <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:default_rpt>
+  </xacro:default_rpt> -->
 
   <!-- Magnetometer  -->
   <!-- <xacro:default_magnetometer namespace="${namespace}" parent_link="${namespace}/base_link"/> -->
