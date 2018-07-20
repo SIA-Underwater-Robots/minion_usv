@@ -17,9 +17,9 @@
   <!-- ###### TO BE IMPLEMENTED ###### -->
 
   <!--  Mount a Hydrophone sensor.  If we put the Beacon on Seabed, parent is Seabed, so? -->
-  <xacro:default_hydrophone namespace="${namespace}" parent_link="${namespace}/base_link" beacon_parent="bluerov2">
+  <!-- <xacro:default_hydrophone namespace="${namespace}" parent_link="${namespace}/base_link" beacon_parent="bluerov2">
     <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:default_hydrophone>
+  </xacro:default_hydrophone> -->
 
 
   <!-- ###### TO DO IN UNDERWATER VEHICLE ###### -->
