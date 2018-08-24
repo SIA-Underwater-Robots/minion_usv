@@ -14,16 +14,16 @@
     Vehicle's parameters (remember to enter the model parameters below)
   -->
   <!-- Mass -->
-  <xacro:property name="mass" value="10"/>
+  <xacro:property name="mass" value="3"/>
   <!-- Describing the dimensions of the vehicle's bounding box: width, length, height -->
-  <xacro:property name="x_size" value="0.448"/>
-  <xacro:property name="y_size" value="0.2384"/>
-  <xacro:property name="z_size" value="0.04066"/>
+  <xacro:property name="x_size" value="0.401"/>
+  <xacro:property name="y_size" value="0.401"/>
+  <xacro:property name="z_size" value="0.201"/> <!-- 0.201 -->
   <!-- minion_usv_height is not really! It's just for run... We need first calculate the Fossen parameters -->
   <!-- Volume -->
-  <xacro:property name="volume" value="0.011054"/>
+  <xacro:property name="volume" value="0.016923"/> <!--  ${(4/3)*3.1415*x_size*y_size*z_size} 0.039 -->
   <!-- Center of gravity -->
-  <xacro:property name="cog" value="0 0 0"/>
+  <xacro:property name="cog" value="-0.025 0 0"/>
   <!--
   Center of buoyancy according to eq. (3.1) p. 28 in Berg2012.
   The original values, [0.0822, -0.00773, 0.3872] however, seem to
@@ -39,6 +39,7 @@
     Open the meshes for the RexROV vehicle in Blender to see an example on the mesh placement.
   -->
   <xacro:property name="visual_mesh_file" value="file://$(find minion_usv_description)/meshes/minion_usv_noprop.dae"/>
+  <!-- file://$(find minion_usv_description)/meshes/minion_usv_noprop.dae -->
 
   <!-- Collision geometry mesh, usually in STL format (it is recommended to keep
   this geometry as simple as possible to improve the performance the physics engine
@@ -58,12 +59,8 @@
         <inertial>
           <mass value="${mass}" />
           <origin xyz="${cog}" rpy="0 0 0"/>
-          <!-- <inertia ixx="525.39" ixy="1.44" ixz="33.41" iyy="794.20" iyz="2.6" izz="691.23"/> -->
-          <inertia
-            ixx="${0.2*mass*y_size*y_size + 0.2*mass*z_size*z_size}" ixy="0.0" ixz="0.0"
-            iyy="${0.2*mass*x_size*x_size + 0.2*mass*z_size*z_size}" iyz="0.0"
-            izz="${0.2*mass*x_size*x_size + 0.2*mass*y_size*y_size}" />
-
+          <!-- <inertia ixx="${1*0.12072}" iyy="${1*0.12072}" izz="${1*0.096481}"  iyz="0.0" ixy="0.0" ixz="0.0" /> -->
+          <inertia ixx="${1*0.03018}" iyy="${1*0.03018}" izz="${1*0.02412}"  iyz="0.0" ixy="0.0" ixz="0.0" />
         </inertial>
 
         <!-- This visual geometry representation can be used when running
@@ -91,6 +88,10 @@
           <origin xyz="0 0 0" rpy="0 0 0"/>
           <geometry>
             <box size="${x_size} ${y_size} ${z_size}"/>
+            <!-- <cylinder>
+              <radius>${x_size}</radius>
+              <length>${z_size}</length>
+            </cylinder> -->
           </geometry>
         </collision>
         <!-- top plate -->

@@ -21,9 +21,13 @@
     can be no spaces between the commas and the floating point values. The default values
     are usually the ones that are going to be used.
     -->
-    <arg name="Kp" default="11993.888,11993.888,11993.888,19460.069,19460.069,19460.069"/>
+    <arg name="Kp" default="11.888, 11.888, 11.888, 19.069, 19.069, 19.069"/>
+    <arg name="Kd" default="90.459, 90.459, 90.459, 18.925, 18.925, 18.925"/>
+    <arg name="Ki" default="3.417, 3.417, 3.417, 2.951, 2.951, 2.951"/>
+
+    <!-- <arg name="Kp" default="11993.888,11993.888,11993.888,19460.069,19460.069,19460.069"/>
     <arg name="Kd" default="9077.459,9077.459,9077.459,18880.925,18880.925,18880.925"/>
-    <arg name="Ki" default="321.417,321.417,321.417,2096.951,2096.951,2096.951"/>
+    <arg name="Ki" default="321.417,321.417,321.417,2096.951,2096.951,2096.951"/> -->
 
     <arg name="teleop_on" default="false"/>
     <arg name="joy_id" default="0"/>

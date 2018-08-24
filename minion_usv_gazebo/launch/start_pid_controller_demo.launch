@@ -13,13 +13,14 @@
     <arg name="joy_id" default="0"/>
 
     <!-- Initial position and heading of the vehicle (wrt Gazebo's inertial frame)  -->
-    <arg name="x" default="4"/>
+    <arg name="x" default="0"/>
     <arg name="y" default="0"/>
     <arg name="z" default="0"/>
     <arg name="yaw" default="0"/>
 
     <!-- Start the a underwater world simulation scenario -->
     <!-- <include file="$(find uuv_descriptions)/launch/ocean_waves.launch"/> -->
+    <!-- <include file="$(find uuv_descriptions)/launch/lake.launch"/> -->
 
     <!-- Wait 5s -->
     <!-- <include file="$(find uuv_simulation_wrapper)/launch/unpause_simulation.launch">
