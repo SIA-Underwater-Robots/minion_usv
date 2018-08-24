@@ -9,59 +9,19 @@
   -->
 
   <!-- Mount a Pose 3D sensor. -->
-  <xacro:default_pose_3d namespace="${namespace}" parent_link="${namespace}/base_link" />
+  <xacro:default_pose_3d namespace="${namespace}" parent_link="${namespace}/base_link">
+    <!-- <origin xyz="0 0 0" rpy="0 0 0"/> -->
+  </xacro:default_pose_3d>
 
   <!-- Mount a GPS. -->
-  <xacro:default_gps namespace="${namespace}" parent_link="${namespace}/base_link" />
+  <xacro:gps_ubloxneom8t namespace="${namespace}" parent_link="${namespace}/base_link">
+    <!-- <origin xyz="0.3 0 0.3" rpy="0 0 0"/> -->
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  </xacro:gps_ubloxneom8t>
 
-  <!-- ###### TO BE IMPLEMENTED ###### -->
-
-  <!--  Mount a Hydrophone sensor.  If we put the Beacon on Seabed, parent is Seabed, so? -->
-  <xacro:default_hydrophone namespace="${namespace}" parent_link="${namespace}/base_link" beacon_parent="bluerov2">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+  <!--  Mount a Hydrophone sensor -->
+  <xacro:default_hydrophone namespace="${namespace}" parent_link="${namespace}/base_link" beacon_parent="rexrov2">
+    <origin xyz="0 0 -1" rpy="0 0 0"/>
   </xacro:default_hydrophone>
-
-
-  <!-- ###### TO DO IN UNDERWATER VEHICLE ###### -->
-
-  <!-- IMU  -->
-  <!-- <xacro:default_imu namespace="${namespace}" parent_link="${namespace}/base_link">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:default_imu> -->
-
-  <!-- Pressure  -->
-  <!-- <xacro:default_pressure namespace="${namespace}" parent_link="${namespace}/base_link">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:default_pressure> -->
-
-  <!-- Mount a camera -->
-  <!-- <xacro:default_camera namespace="${namespace}" parent_link="${namespace}/base_link" suffix="front">
-    <origin xyz="0 0 0.2" rpy="0 0 0"/>
-  </xacro:default_camera> -->
-
-  <!-- Mount chemical particle concentration sensor -->
-  <!-- <xacro:default_chemical_concentration_sensor_macro namespace="${namespace}" parent_link="${namespace}/base_link" inertial_reference_frame="${inertial_reference_frame}">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:default_chemical_concentration_sensor_macro> -->
-
-  <!-- ###### OTHERS ###### -->
-
-  <!-- Forward-looking sonar sensor -->
-  <!-- <xacro:forward_multibeam_p900 namespace="${namespace}" parent_link="${namespace}/base_link">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:forward_multibeam_p900> -->
-
-  <!-- DVL  -->
-  <!-- <xacro:default_dvl namespace="${namespace}" parent_link="${namespace}/base_link">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:default_dvl> -->
-
-  <!-- RPT  -->
-  <!-- <xacro:default_rpt namespace="${namespace}" parent_link="${namespace}/base_link">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:default_rpt> -->
-
-  <!-- Magnetometer  -->
-  <!-- <xacro:default_magnetometer namespace="${namespace}" parent_link="${namespace}/base_link"/> -->
 
 </robot>

@@ -15,8 +15,12 @@
       <box>
         <width>${x_size}</width>
         <length>${y_size}</length>
-        <height>${z_size}</height>
+        <height>${z_size/4}</height>
       </box>
+      <!-- <cylinder>
+        <radius>${x_size}</radius>
+        <length>${0.05}</length>
+      </cylinder> -->
       <!-- Center of buoyancy -->
       <center_of_buoyancy>${cob}</center_of_buoyancy>
 
@@ -29,20 +33,26 @@
           <type>fossen</type>
           <!-- Added mass: see p.28 in Berg2012 -->
           <added_mass>
-            1.7182 0 0 0 0 0
-            0 0 0 0 0 0
-            0 0 5.468 0 0 0
-            0 0 0 0 0 0
-            0 0 0 0 1.2481 0
-            0 0 0 0 0 0.4006
+            0.6321  0      0      0      0       0
+            0       2.1106 0      0      0       0
+            0       0      2.1106 0      0       0
+            0       0      0      0      0       0
+            0       0      0      0      0       0
+            0       0      0      0      0       0
           </added_mass>
+          <!-- 0       0      0      0      0       0
+          0       0      0      0      0       0
+          0       0      0      0      0       0
+          0       0      0      0      0       0
+          0       0      0      0      0       0
+          0       0      0      0      0       0 -->
           <!--
             The linear damping coefficients can be provided as a diagonal (6 elements)
             or a full matrix (36 coefficients), like the added-mass coefficients above
             Linear damping: see p.31 in Berg2012
           -->
           <linear_damping>
-            -11.7391 -20 -31.8678 -25 -44.9085 -5
+            -0.5 -0.5 -0.5 -0.1 -0.1 -0.1  <!--  0 0 0 0 0 0-->
           </linear_damping>
           <!--
             The linear damping coefficients proportional to the forward speed
@@ -59,7 +69,7 @@
             Non-linear damping: see p.30 in Berg2012
           -->
           <quadratic_damping>
-             0 0 0 0 0 0
+             -3.0 -3.0 -3.0 -0.5 -0.5 -0.5
           </quadratic_damping>
 
           <!--
@@ -78,8 +88,8 @@
           -->
 
           <!-- <metacentric_width>0.401</metacentric_width>
-          <metacentric_length>0.401</metacentric_length>
-          <water_level_plane_area>0.12</water_level_plane_area> -->
+          <metacentric_length>0.401</metacentric_length> -->
+          <!-- <water_level_plane_area>0.12</water_level_plane_area> -->
 
       </hydrodynamic_model>
     </link>
